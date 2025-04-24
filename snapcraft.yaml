@@ -78,6 +78,15 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/meta/gui/
       cp $CRAFT_PART_SRC/data/icons/hicolor/scalable/apps/org.gnome.Calculator.svg $CRAFT_PART_INSTALL/meta/gui/
       craftctl default
+    prime:
+      # Don't include files needed to develop things against the gnome-calculator libraries
+      - -usr/include
+      - -usr/lib/*/pkgconfig
+      - -usr/share/gir-1.0
+      - -usr/share/vala
+      # There currently isn't a way to use snaps in GNOME Shell search
+      - -usr/libexec/gnome-calculator-search-provider
+      - -usr/share/gnome-shell/search-providers
 
   # Find files provided by the base and platform snap and ensure they aren't
   # duplicated in this snap
