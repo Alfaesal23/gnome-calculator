@@ -54,6 +54,8 @@ parts:
       - --buildtype=release
       - -Dvala_args="--vapidir=$CRAFT_STAGE/usr/share/vala/vapi"
       - -Ddisable-introspection=true
+      - -Dgcalc=false
+      - -Dgci=false
     organize:
       snap/gnome-calculator/current/usr: usr
     build-packages:
