@@ -82,7 +82,7 @@ parts:
       - -usr/share/gir-1.0
       - -usr/share/vala
       # There currently isn't a way to use snaps in GNOME Shell search
-      - -usr/libexec/gnome-calculator-search-provider
+      - -usr/libexec
       - -usr/share/gnome-shell/search-providers
 
   # Find files provided by the base and platform snap and ensure they aren't
